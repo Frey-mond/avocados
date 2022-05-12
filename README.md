@@ -12,6 +12,8 @@ __Authors: Zachary Zhang, Eric Kim, Daniel Lee__
 # Motivation
 As we all know avocados are the bane of millennials, avocado toast is too tantalizing for millennials to resist which is why they have such poor fiscal responsibility and is the reason why the middle class is shrinking. Or is it?
 
+The purpose of our analysis here is to first determine the general trends of avocados. 
+
 # Dataset
 https://www.kaggle.com/datasets/valentinjoseph/avocado-sales-20152021-us-centric is an [updated dataset](https://www.kaggle.com/datasets/neuromusic/avocado-prices) that contains observed avocado sales data that the [Hass Avocada Board](https://hassavocadoboard.com/) collected from 2015 to 2021. It was created by Valentin Joseph to add additional observations up to 2021. The [original dataset](https://www.kaggle.com/datasets/neuromusic/avocado-prices) created by Justin Kiggins only went from 2015-2018. 
 
@@ -32,11 +34,16 @@ The dataset contains 13 columns. Each row is a recorded observation.
 | year | The year the observation was recorded |
 | region | The geographic location where the observation was recorded. Geographic locations can be states, cities, US regions, and more |
 
-# Challenge goals
+# Challenge Goals
 1. A challenge goal we want to do is use `plotly` for our plotting needs. It would be primarily for question #1. It would be interesting to see the trend of each state for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line chart from `Seaborn`.
 
 2. 
 
 # Method
+1. 
+
+2. 
+
+3. 
 
 # Work Plan
