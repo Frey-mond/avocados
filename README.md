@@ -2,7 +2,7 @@
 __Authors: Zachary Zhang, Eric Kim, Daniel Lee__
 
 # Research Questions
-1. 
+1.  `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 4 plots, two are to plot the overall U.S. to see general trends. The other two plots would be seeing the trends in each state. 
 
 2. 
 
@@ -33,7 +33,7 @@ The dataset contains 13 columns. Each row is a recorded observation.
 | region | The geographic location where the observation was recorded. Geographic locations can be states, cities, US regions, and more |
 
 # Challenge goals
-1. 
+1. A challenge goal we want to do is use `plotly` for our plotting needs. It would be primarily for question #1. It would be interesting to see the trend of each state for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line chart from `Seaborn`.
 
 2. 
 
