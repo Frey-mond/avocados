@@ -2,7 +2,7 @@
 __Authors: Zachary Zhang, Eric Kim, Daniel Lee__
 
 # Research Questions
-1.  `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 4 plots, two are to plot the overall U.S. to see general trends. The other two plots would be seeing the trends in each state. 
+1.  `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot the overall U.S. to see general trends. The other two plots would be seeing the trends in each state. 
 
 2. 
 
@@ -40,7 +40,7 @@ The dataset contains 13 columns. Each row is a recorded observation.
 2. 
 
 # Method
-1. 
+1. For question #1, first be able to plot anything with `plotly`, we will need geospatial data. Unfortunately, our avocado dataset does not come with geospatial data so we will need to load external geospatial data for the U.S. We might have to do a join. From there we will be able to create Choropleth plots. For `AveragePrice` vs `TotalVolume` the two columns would be plotted onto one graph using `subplots()` from `matplotlib.pyplot` as a stacked line plot. After loading in the geospatial data we can plot two seperate Choropleth plots. Ideally we would want to have a time component but initially it will be either one chosen year or an aggregate of all the observations. 
 
 2. 
 
