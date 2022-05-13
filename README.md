@@ -25,6 +25,8 @@ This is to help us establish an overall feel of our avocado dataset.
 
 ## Dataset
 
+### Avocado
+
 <https://www.kaggle.com/datasets/valentinjoseph/avocado-sales-20152021-us-centric> is an [updated dataset](https://www.kaggle.com/datasets/neuromusic/avocado-prices)
 that contains observed avocado sales data that the [Hass Avocada Board](https://hassavocadoboard.com/) collected from 2015 to 2021. It was created by Valentin Joseph
 to add additional observations up to 2021. The [original dataset](https://www.kaggle.com/datasets/neuromusic/avocado-prices) created by Justin Kiggins only went from
@@ -47,6 +49,8 @@ The dataset contains 13 columns. Each row is a recorded observation.
 | year | The year the observation was recorded |
 | region | The geographic location where the observation was recorded. Geographic locations can be states, cities, US regions, and more |
 
+### Avocado Production
+
 <http://data.un.org/Data.aspx?d=FAO&f=itemCode:572&c=2,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=4> is a dataset that shows the area harvested, the total
 yield and production emissions for avocados in every country, as well as total count for the entire world. It is provided by the Food and Agriculture Organization and
 provides data from 1961 to 2018.
@@ -59,6 +63,8 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 | Year | The year the statistic was recorded |
 | Unit | The unit of the element recorded |
 | Value | The total amount of element that was recorded |
+
+### Apples
 
 <http://data.un.org/Data.aspx?d=FAO&f=itemCode:515&c=2,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=14> is a dataset that shows the area harvested, the
 total yield and production emissions for apples in every country, as well as total count for the entire world. It is provided by the Food and Agriculture Organization
