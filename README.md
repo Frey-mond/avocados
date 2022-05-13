@@ -85,7 +85,9 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 It would be interesting to see the trend of each state for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line
 chart from `Seaborn`.
 
-2. Our second challenge goal we want to do is to try and combine __multiple datasets__ together to try and form trends that answer our research questions. For example, for question 2 we want to use multiple datasets in order to try and recognize trends between avocado prices and yields, and we also want to compare our trends for avocado yields to other fruits to try and see if yield trends are universal or dependent on the fruit.
+2. Our second challenge goal we want to do is to try and combine __multiple datasets__ together to try and form trends that answer our research questions. For example,
+for question 2 we want to use multiple datasets in order to try and recognize trends between avocado prices and yields, and we also want to compare our trends for avocado
+yields to other fruits to try and see if yield trends are universal or dependent on the fruit.
 
 ## Method
 
@@ -109,4 +111,4 @@ we'd want to do.
 ## Work Plan
 
 For working together on this project we have a [GitHub repository](https://github.com/Frey-mond/avocados). We are all going to be using VSCode and there is an
-automatic flake8 lintr that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating.
+automatic flake8 linter that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating.
