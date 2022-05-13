@@ -1,6 +1,6 @@
 # The case of the avocado
 
-Authors: Zachary Zhang, Eric Kim, Daniel Lee__
+Authors: Zachary Zhang, Eric Kim, Daniel Lee
 
 ## Research Questions
 
