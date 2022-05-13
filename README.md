@@ -1,4 +1,4 @@
-# The case of the avocado
+# The Case of the Avocado
 
 Authors: Zachary Zhang, Eric Kim, Daniel Lee
 
@@ -82,7 +82,7 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 
 ### Income by Age Group
 
-f11ar.csv is a dataset taken from the US Census website that shows the mean and median income of different age groups in units of the given year's dollars and dollars adjusted for inflation in 2020. 
+<https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-families.html> is a dataset taken from the US Census website that shows the mean and median income of different age groups in units of the given year's dollars and dollars adjusted for inflation in 2020. 
 The data ranges from 1947 to 2020 and covers income data for all ages and subgroups 15-24, 25-34, 35-44, 45-54, 55-64, and 65+.
 
 The data set contains 6 columns:
