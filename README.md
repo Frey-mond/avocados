@@ -12,7 +12,8 @@ the overall U.S. to see general trends. The other two plots would be seeing the 
 fruits as well? For this question, we'd have two graphs: one graph would compare the yield of avocados versus their prices, and the second graph would compare this
 trend with another fruit's yield trend (in our case, apples).
 
-3.
+3. Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
+that predicts the price of avocados based on the mean and median incomes of various age groups.
 
 ## Motivation
 
@@ -79,6 +80,19 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 | Unit | The unit of the element recorded |
 | Value | The total amount of element that was recorded |
 
+f11ar.csv is a dataset taken from the US Census website that shows the mean and median income of different age groups in units of the given year's dollars and dollars adjusted for inflation in 2020. 
+The data ranges from 1947 to 2020 and covers income data for all ages and subgroups 15-24, 25-34, 35-44, 45-54, 55-64, and 65+.
+
+The data set contains 6 columns:
+| Column| Description |
+| ---   | ---         |
+| Age and year | The age range of the sampled set (before table) or the year the data was observed (in table) |
+| Number (thousands) | The number of households in thousands observed |
+| Median Dollars (Current) | The median income in that year's dollars |
+| Median Dollars (2020) | The median income adjusted to 2020 inflation |
+| Mean Dollars (Current) | The mean income in that year's dollars |
+| Mean Dollars (2020) | The mean income adjusted to 2020 inflation |
+
 ## Challenge Goals
 
 1. A challenge goal we want to do is use `plotly` for our plotting needs and __New Library__ as a new library to learn. It would be primarily for question #1.
@@ -106,7 +120,11 @@ dataset, we'd only want the Americas as well as the `yield` with our selected ti
 and then compare this trend with our `apples` dataset with another graph. This may change as we put it into practice, but this would be a general outline for what
 we'd want to do.
 
-3.
+3. For question #3, we plan on using the `Mean Dollars (Current)` and `Median Dollars (Current)` joined with `AveragePrice` to form our dataset for our ML model.
+We will filter the data from f11ar.csv to only contain years from 2015-2020 to match the avocado data we have. Then, we will use `scikit-learn` to
+make a ML model to predict the price of avocados based on the median and mean incomes of various age groups, specifically using a `DecisionTreeRegressor`.
+We will then implement an 80/20 split into training and test data. However, given the relatively small number of parameters to pass in as features, we can expect that the
+model will underfit the dataset. Should the training and testing `accuracy-scores` be on the lower side, we can say for certain.
 
 ## Work Plan
 
