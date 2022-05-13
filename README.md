@@ -22,7 +22,8 @@ and is the reason why the middle class is shrinking. Or is it? We propose to exa
 previous statements.
 
 The purpose of our analysis here is to first determine the general trends of avocados. We are curious about the general feel of how avocados are doing in the U.S.
-This is to help us establish an overall feel of our avocado dataset.
+This is to help us establish an overall feel of our avocado dataset. We also look at how other factors can affect avocados. Lastly we want to take a stab at determining
+whether or not avocado toast is really what is causing the downfall of the middle class.
 
 ## Dataset
 
@@ -131,4 +132,5 @@ model will underfit the dataset. Should the training and testing `accuracy-score
 ## Work Plan
 
 For working together on this project we have a [GitHub repository](https://github.com/Frey-mond/avocados). We are all going to be using VSCode and there is an
-automatic flake8 linter that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating.
+automatic flake8 linter that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating. We are going to be working
+on the questions in parallel in our Python files and working on the challenges when it makes sense to.
