@@ -134,3 +134,15 @@ model will underfit the dataset. Should the training and testing `accuracy-score
 For working together on this project we have a [GitHub repository](https://github.com/Frey-mond/avocados). We are all going to be using VSCode and there is an
 automatic flake8 linter that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating. We are going to be working
 on the questions in parallel in our Python files and working on the challenges when it makes sense to.
+
+### Time Table
+
+| Tasks | Time Estimate |
+| ---   | ---           |
+| Question 1| 3-4 hours |
+| Question 2 | 2-3 hours |
+| Question 3 | 4-5 hours |
+| Challenge 1 | 5-6 hours |
+| Challenge 2 | 7-8 hours |
+| Style and Testing | 25-30 hours (cumulative) |
+| Writeup | 10-15 hours |
