@@ -69,3 +69,6 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 3. 
 
 # Work Plan
+
+For working together on this project we have a [GitHub repository](https://github.com/Frey-mond/avocados). We are all going to be using VSCode and there is an
+automatic flake8 lintr that runs on every commit. If any of us runs into unexpected challenges, we have a group chat for communicating.
