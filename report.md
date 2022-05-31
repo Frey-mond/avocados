@@ -2,6 +2,20 @@
 
 Authors: Zachary Zhang, Eric Kim, Daniel Lee
 
+## Tables of Contents
+
+1. [Research Questions](#research-questions)
+2. [Motivation](#motivation)
+3. [Dataset](#dataset)
+    1. [Avocado](#avocado)
+    2. [Avocado Production](#avocado-production)
+    3. [Apples](#apples)
+    4. [Income by Age Group](#income-by-age-group)
+4. [Challenge Goals](#challenge-goals)
+5. [Method](#method)
+6. [Work Plan](#work-plan)
+    1. [Time Table](#time-table)
+
 ## Research Questions
 
 1. `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
