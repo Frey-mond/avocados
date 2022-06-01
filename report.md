@@ -19,7 +19,7 @@ Authors: Zachary Zhang, Eric Kim, Daniel Lee
 ## Research Questions
 
 1. `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
-the overall U.S. to see general trends. The other two plots would be seeing the trends in each state.
+the overall U.S. to see general trends. The other two plots would be seeing the trends in each city.
 
 2. Do the prices of avocados reflect their yield? In other words, how would an avocado's price be affected by how many avocados were produced for a time period
 (in our case, a year)? Adding on to this, if there was some sort of correlation between the yield of avocados and their prices, could this be reflected for other
@@ -113,7 +113,7 @@ The data set contains 6 columns:
 ## Challenge Goals
 
 1. A challenge goal we want to do is use `plotly` for our plotting needs and __New Library__ as a new library to learn. It would be primarily for question #1.
-It would be interesting to see the trend of each state for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line
+It would be interesting to see the trend of each city for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line
 chart from `Seaborn`.
 
 2. Our second challenge goal we want to do is to try and combine __multiple datasets__ together to try and form trends that answer our research questions. For example,
@@ -123,11 +123,11 @@ yields to other fruits to try and see if yield trends are universal or dependent
 ## Method
 
 1. For question #1, first be able to plot anything with `plotly` as a, we will need geospatial data. Unfortunately, our avocado dataset does not come with geospatial
-data so we will need to load external geospatial data for the U.S. We might have to do a join. We will also have to filter `region` to only states. From there we
+data so we will need to load external geospatial data for the U.S. We might have to do a join. We will also have to filter `region` to only cities. From there we
 will be able to create Choropleth plots. For `AveragePrice` vs `TotalVolume` the two columns would be plotted onto one graph using `subplots()` from `matplotlib.pyplot`
 as a stacked line plot. After loading in the geospatial data we can plot two seperate Choropleth plots. Ideally we would want to have a time component using `year` or
 `Date` but initially it will be either one chosen year or an aggregate of all the observations. By plotting `AveragePrice` vs `TotalVolume` on one  graph, we should
-hopefully be able to see trends and potential correlation between the two columns. For the Chorpleth plot we will be able to see how states differ and maybe regional
+hopefully be able to see trends and potential correlation between the two columns. For the Chorpleth plot we will be able to see how cities differ and maybe regional
 differences or similarities.
 
 2. For question #2, filtering all the data is incredibly important to create the right kind of trends that we want to make. For the avocado prices, we'd want to pick
