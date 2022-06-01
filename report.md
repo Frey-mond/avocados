@@ -15,6 +15,11 @@ Authors: Zachary Zhang, Eric Kim, Daniel Lee
 5. [Method](#method)
 6. [Work Plan](#work-plan)
     1. [Time Table](#time-table)
+7. [Results](#results)
+8. [Impact and Limiations](#impact-and-limications)
+9. [Work Plan Evaluation](#work-plan-evaluation)
+10. [Testing](#testing)
+11. [Resources Used](#resources-used)
 
 ## Research Questions
 
@@ -159,3 +164,13 @@ We will split up the work based on the questions. Each question will be split in
 | Question 3 | 10-12 hours |
 | Style and Testing | 25-30 hours (cumulative) |
 | Writeup | 10-15 hours |
+
+## Results
+
+## Impact and Limications
+
+## Work Plan Evaluation
+
+## Testing
+
+## Resources Used
