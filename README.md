@@ -3,7 +3,7 @@
 ## Library Setup
 
 ```console
-pip install geopandas pandas plotly flake8
+pip install geopandas pandas plotly flake8 scikit-learn
 ```
 
 ## Project Structure
