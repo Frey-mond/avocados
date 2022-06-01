@@ -1,23 +1,21 @@
 """
+CSE 163
+Zachary Zhang
+
+This file is used to perform joins and other
+dataset modifcations accross multiple datasets.
 """
 import pandas as pd
-# import geopandas as gpd
 import pickle
 
 
 def avocados_processing():
     """
+    Used to modify 'avocados cleaned.csv'
     """
     dataset = pd.read_csv(
         './data/avocado cleaned.csv', index_col='Date', parse_dates=True
     )
-    # geo = gpd.read_file(
-    #     './data/stanford-bx729wr3020-geojson.json'
-    # )[['gnis_id', 'name']]
-    # dataset_shp = dataset.merge(
-    #     geo, left_on='region', right_on='name'
-    # )
-    # print(dataset.to_string())
     with open('./data/avocados_shp.df', 'wb') as f:
         pickle.dump(dataset, f)
 
