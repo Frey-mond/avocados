@@ -14,7 +14,7 @@ def yield_trend(data_yield):
     filtered_avo_yield = data_yield[is_2015_to_2018 & is_Americas & is_Yield]
     sns.relplot(x='Year', y='Value', kind='line', data=filtered_avo_yield)
     plt.title('Yield Trend Per Year From 2015 to 2018')
-    plt.savefig('line_plot_bachelors.png', bbox_inches='tight')
+    plt.savefig('./output/line_plot_bachelors.png', bbox_inches='tight')
 
 
 def sale_trend(data_sales):
@@ -34,7 +34,7 @@ def sale_trend(data_sales):
 
 
 def main():
-    avo_sales = pd.read_csv("./data/avocados cleaned.csv")
+    avo_sales = pd.read_csv("./data/avocado cleaned.csv")
     avo_yield = pd.read_csv("./data/UNdata_Export_20220602_013049631.csv")
     yield_trend(avo_yield)
     sale_trend(avo_sales)
