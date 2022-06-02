@@ -40,6 +40,7 @@ def plot_average_price(data):
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
     data = data[['AveragePrice']].resample('BQ').mean().round(2).copy()
+
     fig = px.line(
         data, x=data.index,
         y='AveragePrice',
@@ -61,6 +62,7 @@ def plot_total_volume(data):
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
     data = data[['TotalVolume']].resample('BQ').sum()
+
     fig = px.line(
         data, x=data.index,
         y='TotalVolume',
