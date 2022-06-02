@@ -34,8 +34,8 @@ def sale_trend(data_sales):
 
 
 def main():
-    avo_sales = pd.read_csv("avocado-cleaned.csv")
-    avo_yield = pd.read_csv("UNdata_Export_20220602_013049631.csv")
+    avo_sales = pd.read_csv("./data/avocados cleaned.csv")
+    avo_yield = pd.read_csv("./data/UNdata_Export_20220602_013049631.csv")
     yield_trend(avo_yield)
     sale_trend(avo_sales)
 
