@@ -48,9 +48,12 @@ def plot_average_price(data):
             'AveragePrice': 'Average Price Per Avocado($)',
             'Date': 'Date (Year)'
         },
-        title='Average Avocado Price Per Quarter'
+        title='Average Avocado Price Per Quarter',
+        range_y=[0, 2]
     )
-    fig.update_traces(mode='markers+lines', hovertemplate='Price: $%{y}')
+    fig.update_traces(
+        mode='markers+lines', hovertemplate='Avocado Price: $%{y}'
+    )
     fig.update_layout(hovermode='x unified')
     fig.show()
 
@@ -70,7 +73,8 @@ def plot_total_volume(data):
             'TotalVolume': 'Total Volume',
             'Date': 'Date (Year)'
         },
-        title='Total US Avocado Volume Per Business Quarter'
+        title='Total US Avocado Volume Per Business Quarter',
+        range_y=[0, 650000000]
     )
     fig.update_traces(mode='markers+lines', hovertemplate='Volume: %{y}')
     fig.update_layout(hovermode='x unified')
