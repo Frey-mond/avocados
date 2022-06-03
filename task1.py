@@ -14,6 +14,7 @@ def plot_price_vs_volume(data):
     """
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
+    data['type'] = data['type'].str.lower()
     data['TotalVolume'] = (data['TotalVolume'] / 1000000).round(2).copy()
     data['AveragePrice'] = data['AveragePrice'].round(2).copy()
 
@@ -25,10 +26,16 @@ def plot_price_vs_volume(data):
             'AveragePrice': 'Average Avocado Price ($)',
             'TotalVolume': 'Total Volume (Million)'
         },
+        facet_col='type',
         title='Average Price Vs. Total Volume'
     )
     fig.update_traces(
         hovertemplate='Average Price: $%{x} <br>Total Volume: %{y}M</br>'
+    )
+    fig.for_each_annotation(
+        lambda a: a.update(
+            text=a.text.split("=")[-1].capitalize() + ' Avocados'
+        )
     )
     fig.show()
 
