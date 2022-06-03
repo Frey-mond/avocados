@@ -174,3 +174,5 @@ We will split up the work based on the questions. Each question will be split in
 ## Testing
 
 ## Resources Used
+
+https://plotly.com/python/
