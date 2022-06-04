@@ -4,7 +4,6 @@ Zachary Zhang
 
 This files implements task 1 as outlined in the report.
 """
-import pickle
 import plotly.express as px
 
 
@@ -119,16 +118,3 @@ def plot_total_volume(data):
     fig.update_traces(mode='markers+lines', hovertemplate='Volume: %{y}')
     fig.update_layout(hovermode='x unified')
     fig.show()
-
-
-def main():
-    with open('./data/avocados_shp.df', 'rb') as f:
-        data = pickle.load(f)
-    # plot_total_volume(data)
-    # plot_average_price(data)
-    # plot_price_vs_volume(data)
-    plot_seattle(data)
-
-
-if __name__ == '__main__':
-    main()
