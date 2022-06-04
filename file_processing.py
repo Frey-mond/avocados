@@ -13,11 +13,12 @@ def avocados_processing():
     """
     Used to modify 'avocados cleaned.csv'
     """
-    dataset = pd.read_csv(
+    data = pd.read_csv(
         './data/avocado cleaned.csv', index_col='Date', parse_dates=True
     )
+    data['type'] = data['type'].str.capitalize()
     with open('./data/avocados_shp.df', 'wb') as f:
-        pickle.dump(dataset, f)
+        pickle.dump(data, f)
 
 
 def main():

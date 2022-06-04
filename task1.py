@@ -8,13 +8,45 @@ import pickle
 import plotly.express as px
 
 
+def plot_seattle(data):
+    """
+    Plots the different bag sizes sold in Seattle, Washington.
+    """
+    data = data.copy()
+    data = data[data['region'] == 'Seattle']
+
+    fig = px.bar(
+        data,
+        x=data.index,
+        y=['SmallBags', 'LargeBags', 'XLargeBags'],
+        facet_row='variable',
+        color='type',
+        labels={
+            'Date': 'Date (Month)',
+            'variable': 'Size',
+            'value': 'Bags Sold',
+            'type': 'Avocado Type'
+        },
+        title='Volume of Avocado Bags Sold in Seattle'
+    )
+    fig.update_yaxes(matches=None)
+    fig.for_each_annotation(
+        lambda a: a.update(
+            text=a.text.split("=")[-1]
+        )
+    )
+    fig.update_traces(
+        hovertemplate='Date (Month): %{x} <br>Avocados Sold: %{y}</br> '
+    )
+    fig.show()
+
+
 def plot_price_vs_volume(data):
     """
     Plots the Total Volume of Avocados vs the Average Price of Avocados
     """
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
-    data['type'] = data['type'].str.lower()
     data['TotalVolume'] = (data['TotalVolume'] / 1000000).round(2).copy()
     data['AveragePrice'] = data['AveragePrice'].round(2).copy()
 
@@ -34,9 +66,10 @@ def plot_price_vs_volume(data):
     )
     fig.for_each_annotation(
         lambda a: a.update(
-            text=a.text.split("=")[-1].capitalize() + ' Avocados'
+            text=a.text.split("=")[-1] + ' Avocados'
         )
     )
+
     fig.show()
 
 
@@ -91,9 +124,10 @@ def plot_total_volume(data):
 def main():
     with open('./data/avocados_shp.df', 'rb') as f:
         data = pickle.load(f)
-    plot_total_volume(data)
-    plot_average_price(data)
-    plot_price_vs_volume(data)
+    # plot_total_volume(data)
+    # plot_average_price(data)
+    # plot_price_vs_volume(data)
+    plot_seattle(data)
 
 
 if __name__ == '__main__':
