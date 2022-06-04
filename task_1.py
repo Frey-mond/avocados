@@ -2,14 +2,17 @@
 CSE 163
 Zachary Zhang
 
-This files implements task 1 as outlined in the report.
+This file does some basic plotting of the avocados dataset.
+Using plotly we can get a basic overview of the data and see
+interesting data trends.
 """
 import plotly.express as px
 
 
 def plot_seattle(data):
     """
-    Plots the different bag sizes sold in Seattle, Washington.
+    Plots the volume of avocado bag sizes sold in Seattle, Washington
+    split by organic and conventional avocados.
     """
     data = data.copy()
     data = data[data['region'] == 'Seattle']
@@ -42,7 +45,8 @@ def plot_seattle(data):
 
 def plot_price_vs_volume(data):
     """
-    Plots the Total Volume of Avocados vs the Average Price of Avocados
+    Plots the Total Volume of Avocados sold vs the Average Price of Avocados
+    accross the entire US differentiated by conventional and organic avocados.
     """
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
@@ -74,7 +78,8 @@ def plot_price_vs_volume(data):
 
 def plot_average_price(data):
     """
-    Plots the Average Price of avocados by business quarter.
+    Plots the Average Price of avocados per business quarter sold in
+    the entire US.
     """
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
@@ -99,7 +104,7 @@ def plot_average_price(data):
 
 def plot_total_volume(data):
     """
-    Plots the total US avocado purchasing volume by business quarter.
+    Plots the total US avocado purchasing volume per business quarter.
     """
     data = data.copy()
     data = data[data['region'] == 'TotalUS']
