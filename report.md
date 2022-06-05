@@ -23,16 +23,22 @@ Authors: Zachary Zhang, Eric Kim, Daniel Lee
 
 ## Research Questions
 
-1. `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
-the overall U.S. to see general trends. The other two plots would be seeing the trends in each city.
+1. Question: `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
+the trends in Seattle. The other two plots would be to see the overall trend in the US.
 
-2. Do the prices of avocados reflect their yield? In other words, how would an avocado's price be affected by how many avocados were produced for a time period
+    Result: Generally there is a correlation between the average price of avocados and total volume except for organic avocados. Also the most popular bags sold in Seattle are small avocado bags. 
+
+2. Question: Do the prices of avocados reflect their yield? In other words, how would an avocado's price be affected by how many avocados were produced for a time period
 (in our case, a year)? Adding on to this, if there was some sort of correlation between the yield of avocados and their prices, could this be reflected for other
 fruits as well? For this question, we'd have two graphs: one graph would compare the yield of avocados versus their prices, and the second graph would compare this
 trend with another fruit's yield trend (in our case, apples).
 
-3. Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
+    Result:
+
+3. Question: Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
 that predicts the price of avocados based on the mean and median incomes of various age groups.
+
+    Result:
 
 ## Motivation
 
@@ -167,6 +173,8 @@ We will split up the work based on the questions. Each question will be split in
 
 ## Results
 
+### Task 1
+
 ## Impact and Limications
 
 ## Work Plan Evaluation
@@ -175,4 +183,6 @@ We will split up the work based on the questions. Each question will be split in
 
 ## Resources Used
 
-https://plotly.com/python/
+[Plotly Documentation](https://plotly.com/python/) 
+
+[Stack Overflow](https://stackoverflow.com/)
