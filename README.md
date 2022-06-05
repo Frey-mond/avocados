@@ -2,24 +2,35 @@
 
 ## Library Setup
 
+For conda environments
 ```console
-pip install geopandas pandas plotly flake8 scikit-learn
+conda install pandas seaborn plotly scikit-learn matplotlib
 ```
 
+For python enironments 
+```console
+pip install pandas seaborn plotly scikit-learn matplotlib
+```
 ## Project Structure
 
 ### Folders
 
-`avocados/data` is where the data sets used to generate `report.md` are stored.
+`/data` is where the datasets used to generate the results in `report.md` are stored.
+`/output` is where plots are output and saved.
+
 
 ### Files
 
-`main.py` is the central file where the results for `report.md` are generated.
+`main.py` is the central file for running all the tasks outlined in `report.md`.
 
-`test.py` is where the functions in `task1.py`, `task2.py`, and `task3.py` are tested.
+`test.py` is for testing the functions from `task1.py`, `task2.py`, and `task3.py`.
 
-`task1.py` implements __task 1__ as outlined in `report.md`
+`task_1.py` implements [task 1](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
-`task2.py` implements __task 2__ as outlined in `report.md`
+`task2.py` implements [task 2](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) outlined in `report.md`
 
-`task3.py` implements __task 3__ as outlined in `report.md`
+`task3.py` implements [task 3](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
+
+## Run Project
+
+After installing libraries, run `main.py` to generate the plots and results used in `report.md`
