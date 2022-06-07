@@ -10,7 +10,10 @@ import plotly.express as px
 
 def avocados_for_a_home():
     """
-
+    Formats and cleans the datasets for
+    plot_avocados_for_a_house and
+    plot_avocado_toast_for_a_house, returns
+    the formatted dataset as Dataframe data.
     """
     # Formats Avocado Dataset
     avocado_data = pd.read_csv('./data/avocado cleaned.csv', na_values=['---'])
@@ -39,6 +42,14 @@ def avocados_for_a_home():
 
 
 def plot_avocados_for_a_house(data):
+    """
+    Takes in Dataframe data and plots the average amount of
+    money saved by not purchasing an avocado every day and compares
+    the amount to the price of a house in Detroit and San
+    Francisco. Amount saved determined by the average cost of an
+    avocado from Detroit/San Francisco. Shows, but does not
+    save the plot.
+    """
     data['AnnualAvocadoExpenses'] = data['AveragePrice'] * 365
     data['AvocadoExpenses'] = data['AnnualAvocadoExpenses'].cumsum()
     fig = px.line(
@@ -62,7 +73,14 @@ def plot_avocados_for_a_house(data):
 
 
 def plot_avocado_toast_for_a_house(data):
-    AVG_AVOTST_PRC = 10
+    """
+    Takes in Dataframe data and plots the average amount of
+    money saved by not purchasing an avocado toast every day and compares
+    the amount to the price of a house in San Francisco. Shows, but does not
+    save the plot. Avocado toast price determined from online sources, adjusted
+    for inflation.
+    """
+    AVG_AVOTST_PRC = 10.17
     data['AnnualAvocadoToastExpenses'] = 365 * AVG_AVOTST_PRC
     data['AvocadoToastExpenses'] = data['AnnualAvocadoToastExpenses'].cumsum()
     fig = px.line(
@@ -78,13 +96,3 @@ def plot_avocado_toast_for_a_house(data):
         name="Cumulative Avocado Expenditure"
     )
     fig.show()
-
-
-def main():
-    data = avocados_for_a_home()
-    plot_avocados_for_a_house(data)
-    plot_avocado_toast_for_a_house(data)
-
-
-if __name__ == '__main__':
-    main()
