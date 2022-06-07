@@ -222,7 +222,17 @@ definitely see an increase for both of these factors. From 2016 to 2017, we can 
 still, but the price increase is much more drastic this time around. This is interesting because the yield from 2016 to 2017 is
 only marginally more than the yield from 2015 to 2016, which could indicate other external factors affecting the price jump of
 the avocado. However, the most interesting trend here is from 2017 to 2018. We can see that the yield from 2017 to 2018
-drastically decreases, from around 2500 avocados in hg/ha in 2015 - 2017 to around 1000 avocados in hg/ha in 207 - 2018. 
+drastically decreases, from around 2500 avocados in hg/ha in 2015 - 2017 to around 1000 avocados in hg/ha in 2017 - 2018. Not
+only that, but when we look at the average price of an avocado from 2017 to 2018, it drops from around $1.22 to $1.15. This is
+a clear indication that something occured in 2017 to where the production of avocados decreased, which then decreased the price
+of the avocado. This is, of course not very clear, but we do know that there certainly is a correlation between the price of an
+avocado and the yield it has.
+
+![Yearly Yield of Avocados from 2015 to 2018](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_yield.png)
+![Yearly Yield of Apples from 2015 to 2018](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/apple_yield.png)
+
+Now we look at the same graph of a yearly yield of an avocado, but compare it to another fruit. We picked the apple for our case.
+Looking at these graphs, we can see some very clear similarities, but also some very stark differences.
 ### Task 3
 
 ## Impact and Limications
