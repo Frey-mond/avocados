@@ -1,6 +1,10 @@
 """
 CSE 163
 Daniel Lee
+
+This file plots some basic statistics about the average price of an avocado,
+as well as plot the yield of avocados and apples. All plots are against a
+3 year basis, from 2015 to 2018.
 """
 import pandas as pd
 import seaborn as sns
@@ -10,6 +14,9 @@ sns.set()
 
 
 def yield_trend(data_yield):
+    """
+    Plots the yield of avocados for each year between 2015 and 2018.
+    """
     # Masks for avocado yield dataset
     is_2015_to_2018 = ((data_yield['Year'] >= 2015) &
                        (data_yield['Year'] <= 2018))
@@ -22,6 +29,9 @@ def yield_trend(data_yield):
 
 
 def sale_trend(data_sales):
+    """
+    Plots the average price of an avocado for each year between 2015 and 2018.
+    """
     # Masks for avocado sales dataset
     is_US = (data_sales['region'] == 'TotalUS')
     is_2015_to_2018 = ((data_sales['year'] >= 2015) &
@@ -36,6 +46,9 @@ def sale_trend(data_sales):
 
 
 def apple_yield_trend(apple_data_yield):
+    """
+    Plots the yield of apples for each year between 2015 and 2018.
+    """
     # Masks for apple sales dataset (should be same as avocado sales)
     is_2015_to_2018 = ((apple_data_yield['Year'] >= 2015) &
                        (apple_data_yield['Year'] <= 2018))
