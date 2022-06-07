@@ -242,7 +242,7 @@ that the declining production of apples also caused a significant decrease in pr
 
 ### Task 3
 
-![Amount Saved from Avocado Abstinence vs House Prices in Detroit and San Francisco (2015-2021)](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_toast_savings.png)
+![Amount Saved from Avocado Abstinence vs House Prices in Detroit and San Francisco (2015-2021)](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_savings.png)
 
 Generally, the results reflected what we generally expected. With the average cost of a single avocado hovering around a dollar to a dollar and a half, the daily purchase of an avocado provides little in terms of savings. Especially when compared to the housing market, which has ballooned over the past 7 years, we can say with confidence that avocados alone aren't holding back millenials from purchasing a home.
 
