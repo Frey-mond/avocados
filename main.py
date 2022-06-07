@@ -4,6 +4,7 @@ Eric Kim, Daniel Lee, Zachary Zhang
 
 Runs the different tasks to generate the data used in report.md
 """
+import file_processing
 import task_1
 import task3
 
@@ -18,9 +19,9 @@ def main():
     task_1.plot_price_vs_volume(data)
     task_1.plot_seattle(data)
 
-    data = task3.avocados_for_a_home()
-    task3.plot_avocados_for_a_house(data)
-    task3.plot_avocado_toast_for_a_house(data)
+    data3 = file_processing.avocados_for_a_home()
+    task3.plot_avocados_for_a_house(data3)
+    task3.plot_avocado_toast_for_a_house(data3)
 
 
 if __name__ == '__main__':

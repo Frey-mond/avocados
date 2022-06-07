@@ -38,20 +38,20 @@ trend with another fruit's yield trend (in our case, apples).
 
     Result: There was indeed a correlation between the price of an avocado and the yield of an avocado. From 2015 to 2017 we saw that both the price and yield of avocados were steadily increasing. However, from 2017 - 2018 we saw that while the price of an avocado was decreasing, the yield of avocados drastically slowed down, to where the trend was the slowest out of the years. We also saw a slight correlation between avocados and apples - from 2015 to 2017, we saw that both fruits had an upward trend and were both being produced at a sharp rate, but when 2017 arrived, the yield of avocados slowed down significantly, but even more interestingly was that the yield of apples actually started to plummet.
 
-3. Question: Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
-that predicts the price of avocados based on the mean and median incomes of various age groups.
+3. Question: Can millenials feasibly save enough money from an over-indulgent lifestyle
 
-    Result:
+    Result: In even the most extreme case of avocado/avocado toast consumption, there is little hope for the average millenial to ever be able to 
 
 ## Motivation
 
-As we all know avocados are the bane of millennials, avocado toast is too tantalizing for millennials to resist which is why they have such poor fiscal responsibility
-and is the reason why the middle class is shrinking. Or is it? We propose to examine avocados and their devious nature in the hopes of determing the veracity of the
-previous statements.
+“When I was trying to buy my first home, I wasn’t buying smashed avocado for $19 and four coffees at $4 each,”
+-Tim Gurner, Australian millionaire and real-estate mogul
 
-The purpose of our analysis here is to first determine the general trends of avocados. We are curious about the general feel of how avocados are doing in the U.S.
-This is to help us establish an overall feel of our avocado dataset. We also look at how other factors can affect avocados. Lastly we want to take a stab at determining
-whether or not avocado toast is really what is causing the downfall of the middle class.
+As we all know avocados are the bane of millennials, avocado toast is too tantalizing for millennials to resist which is why they have such poor fiscal responsibility and is the reason why the middle class is shrinking. Or is it? We propose to examine avocados and their  devious nature in the hopes of determing the veracity of the previous statements.
+
+The purpose of our analysis here is to first determine the general trends of avocados. We are curious about the general feel of how avocados are doing in the U.S. This is to help us establish an overall feel of our avocado dataset.
+
+From there, we want to see whether avocados truly are the reason why millenials can never purchase a home of their own. Is it due to the lack of savings being put away that prevents millenials from home-ownership? Or is the ever-inflating housing bubble that locks the middle-class into rentals? We want to see if Mr. Gurner's statement holds any water or if it's all just boomer talk.
 
 ## Dataset
 
@@ -109,20 +109,20 @@ The dataset contains 5 columns. Each row contains a specific statistic for the p
 | Unit | The unit of the element recorded |
 | Value | The total amount of element that was recorded |
 
-### Income by Age Group
+### House Prices
 
-<https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-families.html> is a dataset taken from the US Census website that shows the mean and median income of different age groups in units of the given year's dollars and dollars adjusted for inflation in 2020.
-The data ranges from 1947 to 2020 and covers income data for all ages and subgroups 15-24, 25-34, 35-44, 45-54, 55-64, and 65+.
+<https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv> is a dataset taken from the real estate site Zillow. The set compiles the monthly prices of houses in cities across the US since 2000. Prices are centered around the Zillow Home Value Index (ZHVI), which reflects the typical value of a home within the 35th-65th percentile range of home prices in an area.
 
-The data set contains 6 columns:
+The dataset contains 6* columns:
+(There are over 200 columns, but most are just dates)
 | Column| Description |
 | ---   | ---         |
-| Age and year | The age range of the sampled set (before table) or the year the data was observed (in table) |
-| Number (thousands) | The number of households in thousands observed |
-| Median Dollars (Current) | The median income in that year's dollars |
-| Median Dollars (2020) | The median income adjusted to 2020 inflation |
-| Mean Dollars (Current) | The mean income in that year's dollars |
-| Mean Dollars (2020) | The mean income adjusted to 2020 inflation |
+| RegionID | A six-digit number used to identify the region, most likely for internal use |
+| SizeRank | The rank of the area's population in comparison to the other regions |
+| RegionName | The name of the area |
+| RegionType | The type of area the listed region is, essentially all values are MSA (Metropolitan Statistical Areas) |
+| StateName | Abbreviation of the state where the listed region is located |
+| Date | The date when the price was recorded in MM/DD/YYYY format |
 
 ## Challenge Goals
 
@@ -155,11 +155,7 @@ dataset, we'd only want the Americas as well as the `yield` with our selected ti
 and then compare this trend with our `apples` dataset with another graph. This may change as we put it into practice, but this would be a general outline for what
 we'd want to do.
 
-3. For question #3, we plan on using the `Mean Dollars (Current)` and `Median Dollars (Current)` joined with `AveragePrice` to form our dataset for our ML model.
-We will filter the data from f11ar.csv to only contain years from 2015-2020 to match the avocado data we have. Then, we will use `scikit-learn` to
-make a ML model to predict the price of avocados based on the median and mean incomes of various age groups, specifically using a `DecisionTreeRegressor`.
-We will then implement an 80/20 split into training and test data. However, given the relatively small number of parameters to pass in as features, we can expect that the
-model will underfit the dataset. Should the training and testing `accuracy-scores` be on the lower side, we can say for certain.
+3. For question #3, we will first explore the external housing dataset for the most and least affordable housing markets that are represented in our avocado dataset. From there, we will then aggregate the average price of an avocado for both locations in each given year in the avocado dataset. From there, we will determine an appropriate 
 
 ## Work Plan
 
@@ -246,6 +242,12 @@ that the declining production of apples also caused a significant decrease in pr
 
 ### Task 3
 
+![Amount Saved from Avocado Toast Abstinence vs House Prices in San Francisco (2015-2021)](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_toast_savings.png)
+
+What inspired the change from including both Detroit and San Francisco to just San Francisco came down to multiple reason. Firstly, there was no resources online to give a general estimate of the price of avocado toast in Detroit. While a current menu could have been examined, that would be based on current prices rather than the prices during the time period examined. Secondly, the step up in pricing only really applied to San Francisco.
+
+This is the portion that gives Gurner's statement some creedence. Purchases like an avocado toast everyday or a morning coffee do end up adding up. In our case, a person could have saved almost $26,000 over a 7 year period. However, at the same time, the premise of this situation is unlikely. This plot assumes that a subject is buying a 10 dollar avocado toast every single day for breakfast, which is . Furthermore, seeing how the price of a house in San Francisco increased over 50% over the same period.
+
 ## Impact and Limitations
 
 There are some major limitations of our results. For question #1 we saw that there is a correlation on between volume and
@@ -262,6 +264,7 @@ and would have gotten more accurate results and analysis. We also didn't know an
 dataset, including where they were produced or where they were sold, for example. This also reflects back to the analysis, as
 we're not sure what caused the decline of production between 2017 and 2018 because there is no indication from the data that would
 tell us this.
+For question #3,    
 
 ## Work Plan Evaluation
 
