@@ -5,35 +5,85 @@ Eric Kim
 This file implements task 3 as outlined in the report.
 """
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 
 def avocados_for_a_home():
-    # Creates Avocado Datasets for Detroit and San Fran
+    """
+
+    """
+    # Formats Avocado Dataset
     avocado_data = pd.read_csv('./data/avocado cleaned.csv', na_values=['---'])
     avocado_data = avocado_data.rename(columns={'year': 'Year'})
-    year_mask = avocado_data[(avocado_data['Year'] >= 2015) | (avocado_data['Year'] <= 2021)]
-    san_fran_set = avocado_data[(avocado_data['region'] == 'SanFrancisco') & (year_mask)]
-    detroit_set = avocado_data[(avocado_data['region'] == 'Detroit') & (year_mask)]
-    san_fran_set = san_fran_set.groupby('Year')['AveragePrice'].mean().round(2)
-    detroit_set = detroit_set.groupby('Year')['AveragePrice'].mean().round(2)
-    # Creates Housing Dataset for Detroit and San Fran
-    housing_data = pd.read_csv('./data/Zillow_House_Prices_Cleaned.csv', na_values=['---'])
+    san_fran_mask = avocado_data['region'] == 'SanFrancisco'
+    detroit_mask = avocado_data['region'] == 'Detroit'
+    avocado_data = avocado_data[(san_fran_mask) | (detroit_mask)]
+    avocado_data = avocado_data.groupby(
+        'Year')['AveragePrice'].mean().round(2).reset_index()
+    # Formats Housing Dataset
+    housing_data = pd.read_csv('./data/Zillow_House_Prices_Cleaned.csv',
+                               na_values=['---'])
     housing_data = housing_data[['Date', 'San Francisco, CA', 'Detroit, MI']]
-    housing_data = housing_data.rename(columns={'San Francisco, CA': 'SanFrancisco', "Detroit, MI": "Detroit"})
+    housing_data = housing_data.rename(columns={
+                                        'San Francisco, CA': 'SanFrancisco',
+                                        "Detroit, MI": "Detroit"
+                                        })
     housing_data['Year'] = housing_data['Date'].str[-4:]
-    housing_data = housing_data.groupby('Year').mean().round(2)
-    print(housing_data)
-    print(san_fran_set)
-    # Plot 1
-    
-    # Plot 2
+    housing_data['Year'] = pd.to_numeric(housing_data['Year'])
+    housing_data = housing_data[(housing_data['Year'] >= 2015) &
+                                (housing_data['Year'] <= 2021)]
+    housing_data = housing_data[['Year', 'Detroit', 'SanFrancisco']]
+    housing_data = housing_data.groupby(
+        'Year')[['Detroit', 'SanFrancisco']].mean().round(2).reset_index()
+    return avocado_data.merge(housing_data)
+
+
+def plot_avocados_for_a_house(data):
+    data['AnnualAvocadoExpenses'] = data['AveragePrice'] * 365
+    data['AvocadoExpenses'] = data['AnnualAvocadoExpenses'].cumsum()
+    fig = px.line(
+        data,
+        x='Year',
+        y=['Detroit', 'SanFrancisco'],
+        labels=dict(
+            x='Year',
+            variable='Legend',
+            value='Cost',
+            facet_col='variable'
+        ),
+        title='Amount Saved from Avocados vs. House Prices'
+    )
+    fig.add_bar(
+        x=data['Year'],
+        y=data['AvocadoExpenses'],
+        name='Cumulative Avocado Expenditure'
+    )
+    fig.show()
+
+
+def plot_avocado_toast_for_a_house(data):
     AVG_AVOTST_PRC = 10
+    data['AnnualAvocadoToastExpenses'] = 365 * AVG_AVOTST_PRC
+    data['AvocadoToastExpenses'] = data['AnnualAvocadoToastExpenses'].cumsum()
+    fig = px.line(
+        x=data['Year'],
+        y=data['SanFrancisco'],
+        color=px.Constant('House Price'),
+        labels=dict(x='Year', y='Cost', color='Legend'),
+        title='Amount Saved from Avocado Toasts vs. House Prices'
+    )
+    fig.add_bar(
+        x=data['Year'],
+        y=data['AvocadoToastExpenses'],
+        name="Cumulative Avocado Expenditure"
+    )
+    fig.show()
 
 
 def main():
-    avocados_for_a_home()
+    data = avocados_for_a_home()
+    plot_avocados_for_a_house(data)
+    plot_avocado_toast_for_a_house(data)
 
 
 if __name__ == '__main__':
