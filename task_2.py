@@ -6,7 +6,6 @@ This file plots some basic statistics about the average price of an avocado,
 as well as plot the yield of avocados and apples. All plots are against a
 3 year basis, from 2015 to 2018.
 """
-import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -66,16 +65,3 @@ def apple_yield_trend(apple_data_yield):
     plt.xticks(rotation=-45)
     plt.title('Apple Yield Trend Per Year From 2015 to 2018 (in hg/ha)')
     plt.savefig('./output/apple_yield.png', bbox_inches='tight')
-
-
-def main():
-    avo_sales = pd.read_csv("./data/avocado cleaned.csv")
-    avo_yield = pd.read_csv("./data/UNdata_Export_20220602_013049631.csv")
-    apple_yield = pd.read_csv("./data/UNdata_Export_20220607_053812669.csv")
-    sale_trend(avo_sales)
-    yield_trend(avo_yield)
-    apple_yield_trend(apple_yield)
-
-
-if __name__ == '__main__':
-    main()

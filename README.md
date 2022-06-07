@@ -27,13 +27,11 @@ pip install pandas seaborn pickle plotly scikit-learn matplotlib
 
 `main.py` is the central file for running all the tasks outlined in `report.md`.
 
-`test.py` is for testing joins and dataset values to ensure we've done the filtering and joins correctly.
-
 `task_1.py` implements [task 1](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
 `task_2.py` implements [task 2](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) outlined in `report.md`
 
-`task3.py` implements [task 3](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
+`task_3.py` implements [task 3](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
 ## Run Project
 
