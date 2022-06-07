@@ -232,10 +232,19 @@ avocado and the yield it has.
 ![Yearly Yield of Apples from 2015 to 2018](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/apple_yield.png)
 
 Now we look at the same graph of a yearly yield of an avocado, but compare it to another fruit. We picked the apple for our case.
-Looking at these graphs, we can see some very clear similarities, but also some very stark differences.
+Looking at these graphs, we can see some very clear similarities, but also some very stark differences. When we look at the 2015 -
+2016 trend, we can see that both trends are that of a sharp incline - although more apples are being produced in general, we only
+need to analyze the trends of their yield. From 2016 to 2017, we see again that the trends are very steep and inclining. Although
+the yield of apples slowed down, they are very much still being produced heavily. The yield of avocados are also still strong.
+But, when we get to 2017 - 2018, we again see some very interesting trends. While avocado production has slowed down starting from
+2017, we can see that apple production and yield has actually halted, and instead is decreasing drastically. Again, we cannot derive
+what factors could have caused this just from our graphs alone, so we definitely know that something occured in 2017 that severly
+damaged the yield of fruits. However, from our previous correlation we can also infer that as apple yield was dropping, the price of
+apples were likely plummeting as well. If the production of avocados resulted in a 7 cent average price drop, we can definitely assume
+that the declining production of apples also caused a significant decrease in price.
 ### Task 3
 
-## Impact and Limications
+## Impact and Limitations
 
 There are some major limitations of our results. For question #1 we saw that there is a correlation on between volume and
 average price for avocados but we did not establish that it is a causal relationship. We also didn't account for any
