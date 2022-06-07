@@ -251,6 +251,15 @@ average price for avocados but we did not establish that it is a causal relation
 extenuating factors. Our data only uses data gathered by the Hass Avocado Board which only collected data on hass avocados.
 This analysis wouldn't apply to other avocado types.
 
+For Question 2, there were many factors that caused limitations. The biggest limitation for this question was that the 
+avocado sales dataset only covered the United States, while the avocado yield dataset covered the entire Americas. For our
+project, this was good enough, as the US is one of the strongest economical countries of the Americas, however this could have
+diluted or misrepresented our trends on our graphs. There was also the issue of the timespan. Question 2 looked at 3 years, from
+2015 to 2018, and although this is a sizeable time frame to look at, having more years to analyze would have solidifed our trends
+and would have gotten more accurate results and analysis. We also didn't know any other information regarding the yield and sales
+dataset, including where they were produced or where they were sold, for example. This also reflects back to the analysis, as
+we're not sure what caused the decline of production between 2017 and 2018 because there is no indication from the data that would
+tell us this.
 ## Work Plan Evaluation
 
 ## Testing
@@ -260,3 +269,7 @@ This analysis wouldn't apply to other avocado types.
 [Plotly Documentation](https://plotly.com/python/)
 
 [Stack Overflow](https://stackoverflow.com/)
+
+[Seaborn Documentation](https://seaborn.pydata.org/)
+
+[Matplot Documentation](https://matplotlib.org/)
