@@ -16,6 +16,9 @@ Authors: Zachary Zhang, Eric Kim, Daniel Lee
 6. [Work Plan](#work-plan)
     1. [Time Table](#time-table)
 7. [Results](#results)
+    1. [Task 1](#task-1)
+    2. [Task 2](#task-2)
+    3. [Task 3](#task-3)
 8. [Impact and Limiations](#impact-and-limications)
 9. [Work Plan Evaluation](#work-plan-evaluation)
 10. [Testing](#testing)
@@ -23,16 +26,22 @@ Authors: Zachary Zhang, Eric Kim, Daniel Lee
 
 ## Research Questions
 
-1. `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
-the overall U.S. to see general trends. The other two plots would be seeing the trends in each city.
+1. Question: `AveragePrice` vs `TotalVolume`. How do they compare, is there a correlation between the two, and what are the general trends? We would have 3 plots, 1 is to plot
+the trends in Seattle. The other two plots would be to see the overall trend in the US.
 
-2. Do the prices of avocados reflect their yield? In other words, how would an avocado's price be affected by how many avocados were produced for a time period
+    Result: Generally there is a correlation between the average price of avocados and total volume except for organic avocados. Also the most popular bags sold in Seattle are small avocado bags.
+
+2. Question: Do the prices of avocados reflect their yield? In other words, how would an avocado's price be affected by how many avocados were produced for a time period
 (in our case, a year)? Adding on to this, if there was some sort of correlation between the yield of avocados and their prices, could this be reflected for other
 fruits as well? For this question, we'd have two graphs: one graph would compare the yield of avocados versus their prices, and the second graph would compare this
 trend with another fruit's yield trend (in our case, apples).
 
-3. Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
+    Result:
+
+3. Question: Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
 that predicts the price of avocados based on the mean and median incomes of various age groups.
+
+    Result:
 
 ## Motivation
 
@@ -121,19 +130,23 @@ The data set contains 6 columns:
 It would be interesting to see the trend of each city for avocado data on a map instead of using a line plot. If it is to difficult we can just use a stacked line
 chart from `Seaborn`.
 
+    In the original proposal for question 1, we wanted to graph avocado data with geometries. Unfortunately the `region` column in the dataset was very
+    inconsistent in its formatting. Some strings had no space others others had space for each word. The different regions included were very confusing.
+    There were some cities, a couple of states and some general regions of the US. Due to these issues we elected to plot avocado data in Seattle
+    and accross the entire US.
+
 2. Our second challenge goal we want to do is to try and combine __multiple datasets__ together to try and form trends that answer our research questions. For example,
 for question 2 we want to use multiple datasets in order to try and recognize trends between avocado prices and yields, and we also want to compare our trends for avocado
 yields to other fruits to try and see if yield trends are universal or dependent on the fruit.
 
 ## Method
 
-1. For question #1, first be able to plot anything with `plotly` as a, we will need geospatial data. Unfortunately, our avocado dataset does not come with geospatial
-data so we will need to load external geospatial data for the U.S. We might have to do a join. We will also have to filter `region` to only cities. From there we
-will be able to create Choropleth plots. For `AveragePrice` vs `TotalVolume` the two columns would be plotted onto one graph using `subplots()` from `matplotlib.pyplot`
-as a stacked line plot. After loading in the geospatial data we can plot two seperate Choropleth plots. Ideally we would want to have a time component using `year` or
-`Date` but initially it will be either one chosen year or an aggregate of all the observations. By plotting `AveragePrice` vs `TotalVolume` on one  graph, we should
-hopefully be able to see trends and potential correlation between the two columns. For the Chorpleth plot we will be able to see how cities differ and maybe regional
-differences or similarities.
+1. For question #1 we have to clean up the columns in the avocado dataaset due to inconsistencies in how the string data was formmated. We might have to do a join. We
+will also have to filter `region` to only cities. From there we will be able to create Choropleth plots. For `AveragePrice` vs `TotalVolume` the two columns would be
+plotted onto one graph using `subplots()` from `matplotlib.pyplot` as a stacked line plot. After loading in the geospatial data we can plot two seperate Choropleth plots.
+Ideally we would want to have a time component using `year` or `Date` but initially it will be either one chosen year or an aggregate of all the observations. By plotting
+`AveragePrice` vs `TotalVolume` on one  graph, we should hopefully be able to see trends and potential correlation between the two columns. For the Chorpleth plot we will
+be able to see how cities differ and maybe regional differences or similarities.
 
 2. For question #2, filtering all the data is incredibly important to create the right kind of trends that we want to make. For the avocado prices, we'd want to pick
 a location (in our case, it would be the Americas) and time range to take our data from, and then pick out the data that only pertains to our research question.
@@ -167,10 +180,55 @@ We will split up the work based on the questions. Each question will be split in
 
 ## Results
 
+### Task 1
+
+![Total US Avocado Volume Per Business Quarter](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/volume.png)
+
+Looking at the graph of total volume of US avocado sales, we see an increase overtime. There are quarter to quarter fluctuations with
+peaks generally the spring and falls in the winter. This makes sense because like all fruits, they having a growing season. When supply
+and quality of avocados fall so will demand. There is a massive drop in the winter of 2021 where the total volume of avocados
+falls by 50% compared to the summer of 2021. This could be a result of COVID cases surging in the sametime frame.
+
+![Average Avocado Price Per Quarter](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/average_price.png)
+
+For the average price of avocados, the price is fairly consistent with a slight upwards trend. The quarter to quarter
+fluctuation could be caused by the cost with growing the avocados.
+
+![Average Price Vs Total Volume](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/volume_vs_price.png)
+
+When comparing the average price of avocados and the total volume, two interesting trends occur. We see on the left graph that
+conventional avocados have a negative correlation between the price and volume. The economics of scale means that the more
+volume there is, the lower the price would be.
+
+But on the right, when looking at organic avocados there is no correlation. The price of organic avocados is correlated with
+something else. A potential cause for this might be because the volume of avocado sales is low and an increase in the cost of
+growing organic avocados.
+
+![Volume of Avocado Bags Sold in Seattle](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/seattle.png)
+
+When we look at Seattle the number one thing is that there is a 3 year gap in the data which means we won't have a very good
+picture of whats going on. Graphing the volume of different avocado bags shows that small bags are by far the most popular in
+Seattle. What's interesting is that there is an increase in sales in the beginning of 2016 to the end of July of 2017. Also
+conventional avocados make up the vast majority of sales. With large bags, organic avocados were more popular. And Xlarge bags
+saw a giant increase in popularity in 2021.
+
+### Task 2
+
+### Task 3
+
 ## Impact and Limications
+
+There are some major limitations of our results. For question #1 we saw that there is a correlation on between volume and
+average price for avocados but we did not establish that it is a causal relationship. We also didn't account for any
+extenuating factors. Our data only uses data gathered by the Hass Avocado Board which only collected data on hass avocados.
+This analysis wouldn't apply to other avocado types.
 
 ## Work Plan Evaluation
 
 ## Testing
 
 ## Resources Used
+
+[Plotly Documentation](https://plotly.com/python/)
+
+[Stack Overflow](https://stackoverflow.com/)

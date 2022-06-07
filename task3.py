@@ -5,35 +5,35 @@ Eric Kim
 This file implements task 3 as outlined in the report.
 """
 import pandas as pd
-import pickle
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import train_test_split
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-def price_from_metric_model():
-    # Formats data for model
+
+def avocados_for_a_home():
+    # Creates Avocado Datasets for Detroit and San Fran
     avocado_data = pd.read_csv('./data/avocado cleaned.csv', na_values=['---'])
-    metric_data = pd.read_csv('./data/f11ar cleaned.csv', na_values=['---'])
-    temp = avocado_data.groupby('year')['AveragePrice'].mean().round(2)
-    data = metric_data.merge(temp, on='year', how='left')
-    data = data.dropna()
-    # Assigns features and labels
-    features = data.loc[:, data.columns != 'AveragePrice']
-    features = pd.get_dummies(features)
-    labels = data['AveragePrice']
-    # Runs Model
-    features_train, features_test, labels_train, labels_test = \
-        train_test_split(features, labels, test_size=0.2, shuffle=False)
-    model = DecisionTreeRegressor()
-    model.fit(features_train, labels_train)
-    train_predictions = model.predict(features_train)
-    test_predictions = model.predict(features_test)
-    print('Training Mean Squared Error: ', mean_squared_error(labels_train, train_predictions))
-    print('Test Mean Squared Error', mean_squared_error(labels_test, test_predictions))
+    avocado_data = avocado_data.rename(columns={'year': 'Year'})
+    year_mask = avocado_data[(avocado_data['Year'] >= 2015) | (avocado_data['Year'] <= 2021)]
+    san_fran_set = avocado_data[(avocado_data['region'] == 'SanFrancisco') & (year_mask)]
+    detroit_set = avocado_data[(avocado_data['region'] == 'Detroit') & (year_mask)]
+    san_fran_set = san_fran_set.groupby('Year')['AveragePrice'].mean().round(2)
+    detroit_set = detroit_set.groupby('Year')['AveragePrice'].mean().round(2)
+    # Creates Housing Dataset for Detroit and San Fran
+    housing_data = pd.read_csv('./data/Zillow_House_Prices_Cleaned.csv', na_values=['---'])
+    housing_data = housing_data[['Date', 'San Francisco, CA', 'Detroit, MI']]
+    housing_data = housing_data.rename(columns={'San Francisco, CA': 'SanFrancisco', "Detroit, MI": "Detroit"})
+    housing_data['Year'] = housing_data['Date'].str[-4:]
+    housing_data = housing_data.groupby('Year').mean().round(2)
+    print(housing_data)
+    print(san_fran_set)
+    # Plot 1
+    
+    # Plot 2
+    AVG_AVOTST_PRC = 10
 
 
 def main():
-    price_from_metric_model()
+    avocados_for_a_home()
 
 
 if __name__ == '__main__':

@@ -41,7 +41,8 @@ def apple_yield_trend(apple_data_yield):
                        (apple_data_yield['Year'] <= 2018))
     is_Americas = (apple_data_yield['Country or Area'] == 'Americas')
     is_Yield = (apple_data_yield['Element'] == 'Yield')
-    filtered_apple_yield = apple_data_yield[is_2015_to_2018 & is_Americas & is_Yield]
+    filtered_apple_yield = apple_data_yield[is_2015_to_2018
+                                            & is_Americas & is_Yield]
     sns.relplot(x='Year', y='Value', kind='line', data=filtered_apple_yield)
     plt.title('Apple Yield Trend Per Year From 2015 to 2018 (in hg/ha)')
     plt.savefig('./output/apple_yield.png', bbox_inches='tight')
