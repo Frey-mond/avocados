@@ -24,6 +24,7 @@ def yield_trend(data_yield):
     is_Yield = (data_yield['Element'] == 'Yield')
     filtered_avo_yield = data_yield[is_2015_to_2018 & is_Americas & is_Yield]
     sns.relplot(x='Year', y='Value', kind='line', data=filtered_avo_yield)
+    plt.ylabel("Avocado Yield (in hg/ha)")
     plt.title('Avocado Yield Trend Per Year From 2015 to 2018 (in hg/ha)')
     plt.savefig('./output/avocado_yield.png', bbox_inches='tight')
 
@@ -41,6 +42,8 @@ def sale_trend(data_sales):
     filtered_avo_sales = data_sales[is_US & is_2015_to_2018 & is_conventional]
     sns.relplot(x='year', y='AveragePrice', kind='line',
                 data=filtered_avo_sales)
+    plt.xlabel("Year")
+    plt.ylabel("Average Avocado Price (in USD)")
     plt.title('Average Price of an Avocado from 2015 to 2018')
     plt.savefig('./output/avocado_sales.png', bbox_inches='tight')
 
@@ -57,6 +60,7 @@ def apple_yield_trend(apple_data_yield):
     filtered_apple_yield = apple_data_yield[is_2015_to_2018
                                             & is_Americas & is_Yield]
     sns.relplot(x='Year', y='Value', kind='line', data=filtered_apple_yield)
+    plt.ylabel("Apple Yield (in hg/ha)")
     plt.title('Apple Yield Trend Per Year From 2015 to 2018 (in hg/ha)')
     plt.savefig('./output/apple_yield.png', bbox_inches='tight')
 
