@@ -155,7 +155,7 @@ dataset, we'd only want the Americas as well as the `yield` with our selected ti
 and then compare this trend with our `apples` dataset with another graph. This may change as we put it into practice, but this would be a general outline for what
 we'd want to do.
 
-3. For question #3, we will first explore the external housing dataset for the most and least affordable housing markets that are represented in our avocado dataset. From there, we will then aggregate the average price of an avocado for both locations in each given year in the avocado dataset. From there, we will determine an appropriate 
+3. For question #3, we will first explore the external housing dataset for the most and least affordable housing markets that are represented in our avocado dataset. From there, we will then aggregate the average price of an avocado for both locations in each given year in the avocado dataset. From there, we will determine an appropriate amount of avocados consumed each year, represented as `AnnualAvocadoExpenses`. We will then multiply that amount by `AveragePrice` in order to determine a total amount of expenses. We will then compare that to the average price of a house each year in the most and least affordable housing markets. Additionally, we will repeat the process for a second plot, but rather than using the average price of an avocado for the given year, we will instead find the average price for avocado toast in the most and least affordable housing markets.
 
 ## Work Plan
 
@@ -242,11 +242,17 @@ that the declining production of apples also caused a significant decrease in pr
 
 ### Task 3
 
+![Amount Saved from Avocado Abstinence vs House Prices in Detroit and San Francisco (2015-2021)](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_toast_savings.png)
+
+Generally, the results reflected what we generally expected. With the average cost of a single avocado hovering around a dollar to a dollar and a half, the daily purchase of an avocado provides little in terms of savings. Especially when compared to the housing market, which has ballooned over the past 7 years, we can say with confidence that avocados alone aren't holding back millenials from purchasing a home.
+
+That isn't to say we weren't entirely surprised by this statistic. For example, we expected at least some regions to stagnate in housing prices. Detroit, despite the urban flight from the region, still commanded a 37.9% increase in home price. This outpaced the time period's cumulative price increase from inflation of 14.33%. Other things that we observed was the large jumps in house prices from 2020 to 2021, which followed the nationwide boom in the housing market during the pandemic.
+
 ![Amount Saved from Avocado Toast Abstinence vs House Prices in San Francisco (2015-2021)](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_toast_savings.png)
 
-What inspired the change from including both Detroit and San Francisco to just San Francisco came down to multiple reason. Firstly, there was no resources online to give a general estimate of the price of avocado toast in Detroit. While a current menu could have been examined, that would be based on current prices rather than the prices during the time period examined. Secondly, the step up in pricing only really applied to San Francisco.
+What inspired the change from including both Detroit and San Francisco to just San Francisco came down to two main reasons. Firstly, there was no resources online to give a general estimate of the price of avocado toast in Detroit. While a current menu could have been examined, that would be based on current prices rather than the prices during the time period examined. Secondly, it generally fit the findings in outside research. Particularly, in a Time Magazine article, it was stated that San Francisco had the highest avocado toast consumption per capita. This somewhat justified the unlikely situation that someone would get avocado toast for breakfast everyday. 
 
-This is the portion that gives Gurner's statement some creedence. Purchases like an avocado toast everyday or a morning coffee do end up adding up. In our case, a person could have saved almost $26,000 over a 7 year period. However, at the same time, the premise of this situation is unlikely. This plot assumes that a subject is buying a 10 dollar avocado toast every single day for breakfast, which is . Furthermore, seeing how the price of a house in San Francisco increased over 50% over the same period.
+This is the portion that gives Gurner's statement some creedence. More significant purchases like an avocado toast everyday or a morning coffee do end up adding up. In our case, a person could have saved almost $26,000 over the 7 year period from 2015 to 2021. However, at the same time, the premise of this situation is extremely unlikely, even if San Francisco is America's capital of avocado toast. This plot assumes that a subject is buying a 10 dollar avocado toast every single day for breakfast. Outside of an unlikely circumstance, seeing how the price of a house in San Francisco increased over 50% over the same period, it is clear that the reality is that millenials have little chance ever escaping the trap of renting. A 2019 TD Ameritrade survey found that 37% of millenials say that they are behind on retirement investment because of housing costs. So the upward trend in property values in metropolitan areas bodes an unsustainable trend in our housing economy.
 
 ## Impact and Limitations
 
@@ -264,11 +270,14 @@ and would have gotten more accurate results and analysis. We also didn't know an
 dataset, including where they were produced or where they were sold, for example. This also reflects back to the analysis, as
 we're not sure what caused the decline of production between 2017 and 2018 because there is no indication from the data that would
 tell us this.
-For question #3,    
+
+For question #3, we obviously couldn't do what we planned out exactly due to the lack of a resource on Detroit's average price for avocado toast. However, the largest limitation we felt we ran into was that of time. Originally, we planned to us an ML model to predict avocado prices based on the incomes of various age groups in the US. However, that didn't pan out as we anticipated since we felt that somewhat strayed from challenge goals and general narrative we wanted to follow in the data. As a result, we had to quickly come up with a new question, write code for it and evaluate the results. So, we felt that we didn't explore the dataset as much as we wanted to explore larger trends in the US.
 
 ## Work Plan Evaluation
+We felt that our work plan more or less worked. Being able to work asynchronously on each task with occasional check-ins worked well for our team. We didn't exactly follow the planned work pacing, especially with Task 3 since we had to eventually go back and start from scratch. Furthermore, the timing of Style, Testing, and the Writeup were also a bit off, given the interconnected nature of the three, but not to a point of complete overestimation, which we felt was good. We felt that we worked more or less on pace despite differing schedules and are satisfied with the work that we did complete.
 
 ## Testing
+More or less for testing, since we were relying on plots and examining trends from them, we often manual went through the dataframes during the cleaning/formatting process in order to confirm whether the data was still correct after joins. As a result, much of the testing isn't present as it was done during the coding process.
 
 ## Resources Used
 
@@ -279,3 +288,9 @@ For question #3,
 [Seaborn Documentation](https://seaborn.pydata.org/)
 
 [Matplot Documentation](https://matplotlib.org/)
+
+## Sources
+
+[TD Ameritrade Survey](https://s2.q4cdn.com/437609071/files/doc_news/research/2019/retirement-pulse-survey.pdf)
+
+[Time Magazine Article](https://time.com/4861608/avocado-toast-cost-spending-americans-square/)
