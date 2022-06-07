@@ -2,15 +2,20 @@
 
 ## Library Setup
 
+This project has a variety of dependencies that need to be installed before you `main.py` can be run.
+
 For conda environments
+
 ```console
-conda install pandas seaborn plotly scikit-learn matplotlib
+conda install pandas pickle seaborn plotly scikit-learn matplotlib
 ```
 
-For python enironments 
+For python environments
+
 ```console
-pip install pandas seaborn plotly scikit-learn matplotlib
+pip install pandas seaborn pickle plotly scikit-learn matplotlib
 ```
+
 ## Project Structure
 
 ### Folders
@@ -18,12 +23,11 @@ pip install pandas seaborn plotly scikit-learn matplotlib
 `/data` is where the datasets used to generate the results in `report.md` are stored.
 `/output` is where plots are output and saved.
 
-
 ### Files
 
 `main.py` is the central file for running all the tasks outlined in `report.md`.
 
-`test.py` is for testing the functions from `task1.py`, `task2.py`, and `task3.py`.
+`test.py` is for testing joins and dataset values to ensure we've done the filtering and joins correctly.
 
 `task_1.py` implements [task 1](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
