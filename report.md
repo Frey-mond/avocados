@@ -38,9 +38,9 @@ trend with another fruit's yield trend (in our case, apples).
 
     Result: There was indeed a correlation between the price of an avocado and the yield of an avocado. From 2015 to 2017 we saw that both the price and yield of avocados were steadily increasing. However, from 2017 - 2018 we saw that while the price of an avocado was decreasing, the yield of avocados drastically slowed down, to where the trend was the slowest out of the years. We also saw a slight correlation between avocados and apples - from 2015 to 2017, we saw that both fruits had an upward trend and were both being produced at a sharp rate, but when 2017 arrived, the yield of avocados slowed down significantly, but even more interestingly was that the yield of apples actually started to plummet.
 
-3. Question: Can millenials feasibly save enough money from an over-indulgent lifestyle
+3. Question: Can millenials feasibly save enough money from an over-indulgent lifestyle of avocado toasts (homemade and retail) in order to finally purchase a house? It's said that the glib daily spending of millenials is why they can't afford to save for a house, but we plan to put that to the test.
 
-    Result: In even the most extreme case of avocado/avocado toast consumption, there is little hope for the average millenial to ever be able to 
+    Result: In even the most extreme case of avocado/avocado toast consumption, there is little hope for the average millenial to ever be able to purchase a home from just daily savings alone, as the cost of property far outpaces the amount that can be saved from frivolous purchases.
 
 ## Motivation
 
