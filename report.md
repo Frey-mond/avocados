@@ -36,7 +36,7 @@ the trends in Seattle. The other two plots would be to see the overall trend in 
 fruits as well? For this question, we'd have two graphs: one graph would compare the yield of avocados versus their prices, and the second graph would compare this
 trend with another fruit's yield trend (in our case, apples).
 
-    Result:
+    Result: There was indeed a correlation between the price of an avocado and the yield of an avocado. From 2015 to 2017 we saw that both the price and yield of avocados were steadily increasing. However, from 2018 onwards we saw that while the price of an avocado was decreasing, the yield of avocados drastically slowed down, to where the trend was the slowest out of the years. We also saw a slight correlation between avocados and apples - from 2015 to 2017, we saw that both fruits had an upward trend and were both being produced at a sharp rate, but when 2018 came, the yield of avocados slowed down significantly, but even more interestingly was that the yield of apples actually started to plummet.
 
 3. Question: Can we use the income of people to predict the price of avocados? Does a higher income mean that people can afford to spend more on avocados? We will implement a model
 that predicts the price of avocados based on the mean and median incomes of various age groups.
