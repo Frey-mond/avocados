@@ -14,7 +14,7 @@ def yield_trend(data_yield):
     filtered_avo_yield = data_yield[is_2015_to_2018 & is_Americas & is_Yield]
     sns.relplot(x='Year', y='Value', kind='line', data=filtered_avo_yield)
     plt.title('Yield Trend Per Year From 2015 to 2018')
-    plt.savefig('./output/line_plot_bachelors.png', bbox_inches='tight')
+    plt.savefig('./output/avo_yield_by_year.png', bbox_inches='tight')
 
 
 def sale_trend(data_sales):
@@ -29,7 +29,7 @@ def sale_trend(data_sales):
     """
     sns.relplot(x='year', y='Yield', kind='line', data=filtered_avo_sales)
     plt.title('Yield Trend Per Year From 2015 to 2018')
-    plt.savefig('line_plot_bachelors2.png', bbox_inches='tight')
+    plt.savefig('app_yield_by_year.png', bbox_inches='tight')
     """
 
 
