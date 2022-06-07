@@ -213,7 +213,16 @@ conventional avocados make up the vast majority of sales. With large bags, organ
 saw a giant increase in popularity in 2021.
 
 ### Task 2
+![Average Price of an Avocado from 2015 to 2018](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_sales.png)
+![Yearly Yield of Avocados from 2015 to 2018](https://raw.githubusercontent.com/Frey-mond/avocados/main/output/avocado_yield.png)
 
+First, looking at these two graphs we can see that from 2015 to 2016, there was an increase in both avocado prices as well as
+avocado yields. It's hard to say whether or not the trend for the price line up exactly with how much was produced, but we can
+definitely see an increase for both of these factors. From 2016 to 2017, we can see that both the yield and price are increasing
+still, but the price increase is much more drastic this time around. This is interesting because the yield from 2016 to 2017 is
+only marginally more than the yield from 2015 to 2016, which could indicate other external factors affecting the price jump of
+the avocado. However, the most interesting trend here is from 2017 to 2018. We can see that the yield from 2017 to 2018
+drastically decreases (around 1500 avocados less compared to 2015 - 2017) to around 
 ### Task 3
 
 ## Impact and Limications
