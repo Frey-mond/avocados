@@ -31,7 +31,7 @@ pip install pandas seaborn pickle plotly scikit-learn matplotlib
 
 `task_1.py` implements [task 1](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
-`task2.py` implements [task 2](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) outlined in `report.md`
+`task_2.py` implements [task 2](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) outlined in `report.md`
 
 `task3.py` implements [task 3](https://github.com/Frey-mond/avocados/blob/main/report.md#research-questions) as outlined in `report.md`
 
